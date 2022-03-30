@@ -1,0 +1,1059 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://bomb_party_v4.png" type="Texture" id=1]
+[ext_resource path="res://pedra.png" type="Texture" id=2]
+[ext_resource path="res://parede.png" type="Texture" id=3]
+[ext_resource path="res://player1.png" type="Texture" id=4]
+[ext_resource path="res://player2.png" type="Texture" id=5]
+[ext_resource path="res://coração_joao.png" type="Texture" id=6]
+[ext_resource path="res://Godot-Fontpack/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://relogio.gd" type="Script" id=8]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.97026, 8.01545 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 31.75, 265.5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 10
+font_data = ExtResource( 7 )
+
+[node name="Base_Map" type="Node2D"]
+
+[node name="BattleMap" type="TileMap" parent="."]
+format = 1
+script = ExtResource( 8 )
+
+[node name="map de fundo" type="Sprite" parent="BattleMap"]
+position = Vector2( 513, 331 )
+scale = Vector2( 4.25833, 2.5625 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 138, 147 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 275, 147 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D2"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D2"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 411, 147 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D3"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D3"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 547, 147 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D4"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D4"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 683, 148 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D5"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D5"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 819, 148 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D6"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D6"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 138, 230 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D7"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D7"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 276, 229 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D8"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D8"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 411, 229 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D9"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D9"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 547, 229 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D10"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D10"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 684, 229 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D11"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D11"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 820, 229 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D12"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D12"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 139, 311 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D13"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D13"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 138, 393 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D14"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D14"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 138, 475 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D15"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D15"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 275, 311 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D16"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D16"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 274, 393 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D17"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D17"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 274, 475 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D18"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D18"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 411, 311 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D19"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D19"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 548, 311 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D20"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D20"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 684, 312 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D21"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D21"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D22" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 820, 311 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D22"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D22"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D23" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 411, 393 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D23"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D23"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D24" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 411, 475 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D24"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D24"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D25" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 547, 393 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D25"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D25"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D26" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 547, 475 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D26"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D26"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D27" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 684, 393 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D27"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D27"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D28" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 684, 475 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D28"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D28"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D29" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 819, 393 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D29"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D29"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D30" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 819, 475 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D30"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D30"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D31" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 69.0001, 65 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D31"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D31"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D32" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 138, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D32"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D32"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D33" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 206, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D33"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D33"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D34" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 274, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D34"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D34"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D35" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 342, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D35"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D35"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D36" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 411, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D36"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D36"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D37" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 479, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D37"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D37"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D38" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 547, 65 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D38"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D38"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D39" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 615, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D39"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D39"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D40" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 683, 65 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D40"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D40"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D41" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 751, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D41"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D41"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D42" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 819, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D42"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D42"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D43" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 887, 64 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D43"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D43"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D44" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 70.0001, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D44"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D44"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D45" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 138, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D45"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D45"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D46" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 206, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D46"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D46"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D47" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 274, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D47"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D47"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D48" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 343, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D48"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D48"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D49" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 411, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D49"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D49"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D50" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 479, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D50"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D50"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D51" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 547, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D51"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D51"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D52" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 615, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D52"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D52"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D53" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 683, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D53"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D53"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D54" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 751, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D54"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D54"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D55" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 819, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D55"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D55"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D56" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 888, 556 )
+scale = Vector2( 4.26586, 2.49518 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bloco pedra" type="Sprite" parent="BattleMap/StaticBody2D56"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/StaticBody2D56"]
+position = Vector2( 7.97025, 8.01545 )
+shape = SubResource( 2 )
+
+[node name="wall left" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 2, -1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="BattleMap/wall left"]
+position = Vector2( 35, 331 )
+scale = Vector2( 4.04388, 2.55081 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/wall left"]
+position = Vector2( 34.25, 331.5 )
+shape = SubResource( 3 )
+
+[node name="wall right" type="StaticBody2D" parent="BattleMap"]
+position = Vector2( 954, -1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="BattleMap/wall right"]
+position = Vector2( 35, 331 )
+scale = Vector2( 4.04388, 2.55081 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleMap/wall right"]
+position = Vector2( 34.25, 331.5 )
+shape = SubResource( 3 )
+
+[node name="Topo" type="Control" parent="BattleMap"]
+modulate = Color( 0.0470588, 0.392157, 0, 1 )
+anchor_right = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 1022.0
+margin_bottom = 63.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="BattleMap/Topo"]
+modulate = Color( 0.207843, 0.607843, 0.247059, 1 )
+anchor_right = 1.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = -1.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vida_p1" type="HSplitContainer" parent="BattleMap/Topo"]
+anchor_top = 0.1
+anchor_right = 0.001
+anchor_bottom = 0.1
+margin_left = 33.0
+margin_top = -0.0999999
+margin_right = 133.0
+margin_bottom = 50.0
+rect_scale = Vector2( 0.593462, 0.948046 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="BattleMap/Topo/vida_p1"]
+position = Vector2( 48.8658, 26.37 )
+scale = Vector2( 0.391322, 0.201351 )
+texture = ExtResource( 6 )
+
+[node name="player1" type="HSplitContainer" parent="BattleMap/Topo"]
+anchor_top = 0.1
+anchor_right = 0.001
+anchor_bottom = 0.1
+margin_left = 128.0
+margin_top = -0.1
+margin_right = 228.0
+margin_bottom = 50.0
+rect_scale = Vector2( 0.593462, 0.948046 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="BattleMap/Topo/player1"]
+position = Vector2( 50.5509, 25.3152 )
+scale = Vector2( 0.363659, 0.194502 )
+texture = ExtResource( 4 )
+
+[node name="vida_p2" type="HSplitContainer" parent="BattleMap/Topo"]
+anchor_top = 0.1
+anchor_right = 0.001
+anchor_bottom = 0.1
+margin_left = 672.0
+margin_top = 5.9
+margin_right = 772.0
+margin_bottom = 56.0
+rect_scale = Vector2( 0.553464, 0.948046 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="BattleMap/Topo/vida_p2"]
+position = Vector2( 52.2358, 20.0412 )
+scale = Vector2( 0.391322, 0.201351 )
+texture = ExtResource( 6 )
+
+[node name="player2" type="HSplitContainer" parent="BattleMap/Topo"]
+anchor_top = 0.1
+anchor_right = 0.001
+anchor_bottom = 0.1
+margin_left = 767.0
+margin_top = -0.1
+margin_right = 867.0
+margin_bottom = 50.0
+rect_scale = Vector2( 0.593462, 0.948046 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="BattleMap/Topo/player2"]
+position = Vector2( 52.2357, 26.37 )
+scale = Vector2( 0.367879, 0.191806 )
+texture = ExtResource( 5 )
+
+[node name="pontos_p2" type="HSplitContainer" parent="BattleMap/Topo"]
+anchor_top = 0.1
+anchor_right = 0.001
+anchor_bottom = 0.1
+margin_left = 861.0
+margin_top = 0.900002
+margin_right = 961.0
+margin_bottom = 50.9
+rect_scale = Vector2( 0.940208, 0.948046 )
+
+[node name="pontos_player1" type="Label" parent="BattleMap/Topo"]
+margin_left = 224.0
+margin_top = 7.0
+margin_right = 279.0
+margin_bottom = 27.0
+rect_scale = Vector2( 2.2202, 2.35497 )
+custom_fonts/font = SubResource( 6 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pontos_player2" type="Label" parent="BattleMap/Topo"]
+margin_left = 864.0
+margin_top = 8.0
+margin_right = 919.0
+margin_bottom = 28.0
+rect_scale = Vector2( 2.2202, 2.35497 )
+custom_fonts/font = SubResource( 6 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timer" type="Label" parent="BattleMap/Topo"]
+margin_left = 385.0
+margin_top = 5.0
+margin_right = 425.0
+margin_bottom = 21.0
+rect_scale = Vector2( 4.6771, 3.3368 )
+custom_fonts/font = SubResource( 7 )
+text = "00:00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="clock" type="Timer" parent="BattleMap/Topo/timer"]
+
+[connection signal="ready" from="BattleMap/Topo/timer/clock" to="BattleMap" method="_on_clock_ready"]
