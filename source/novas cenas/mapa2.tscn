@@ -1,9 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://novos assets/TX Tileset Grass.png" type="Texture" id=1]
 [ext_resource path="res://novos assets/TX Props.png" type="Texture" id=2]
 [ext_resource path="res://novos assets/TX Plant.png" type="Texture" id=3]
 [ext_resource path="res://novas cenas/jogadorbranco.tscn" type="PackedScene" id=4]
+[ext_resource path="res://novos scripts/lifecounter.gd" type="Script" id=5]
+[ext_resource path="res://coração_joao.png" type="Texture" id=6]
+[ext_resource path="res://Godot-Fontpack/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://player1.png" type="Texture" id=8]
+[ext_resource path="res://novos assets/16bit_bomb1.png" type="Texture" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -19,6 +24,8 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 64, 0, 64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="GDScript" id=8]
 
 [sub_resource type="TileSet" id=6]
 0/name = "TX Tileset Grass.png 0"
@@ -531,6 +538,29 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 33/shape_one_way_margin = 0.0
 33/shapes = [  ]
 33/z_index = 0
+51/name = "16bit_bomb1.png 51"
+51/texture = ExtResource( 9 )
+51/tex_offset = Vector2( 0, 0 )
+51/modulate = Color( 1, 1, 1, 1 )
+51/region = Rect2( 0, 0, 16, 16 )
+51/tile_mode = 0
+51/occluder_offset = Vector2( 0, 0 )
+51/navigation_offset = Vector2( 0, 0 )
+51/shape_offset = Vector2( 0, 0 )
+51/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+51/shape_one_way = false
+51/shape_one_way_margin = 0.0
+51/shapes = [  ]
+51/z_index = 0
+script = SubResource( 8 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 14
+outline_color = Color( 0.0588235, 0.00392157, 0.00392157, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 0.0444003, 0.327781 )
 
 [node name="Mapa2" type="Node2D"]
 
@@ -545,3 +575,79 @@ tile_data = PoolIntArray( 131072, 21, 0, 131073, 21, 0, 131074, 21, 0, 131075, 2
 
 [node name="player1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 112, 144 )
+
+[node name="Painel" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 63.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life_p1" type="Label" parent="Painel"]
+anchor_top = 0.2
+anchor_bottom = 0.2
+margin_left = 52.7234
+margin_top = 0.758755
+margin_right = 92.7234
+margin_bottom = 18.7588
+rect_scale = Vector2( 1.54261, 2.94972 )
+custom_colors/font_color = Color( 0.0745098, 0.00784314, 0.00784314, 1 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life sprite_p1" type="Sprite" parent="Painel"]
+position = Vector2( 59.7234, 31.7588 )
+scale = Vector2( 0.211715, 0.228036 )
+z_index = -5
+texture = ExtResource( 6 )
+
+[node name="Player specific_p1" type="Sprite" parent="Painel"]
+position = Vector2( 160, 32 )
+scale = Vector2( 1.53199, 1.60761 )
+texture = ExtResource( 8 )
+
+[node name="Score counter" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Score counter"]
+
+[node name="Control" type="Control" parent="Score counter/CanvasLayer"]
+margin_left = 323.0
+margin_top = 12.0
+margin_right = 363.0
+margin_bottom = 52.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Score counter/CanvasLayer/Control"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 45.0
+margin_bottom = 42.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bomba" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Bomba"]
+position = Vector2( 165, 134 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bomba/Area2D"]
+position = Vector2( 11, 9.92947 )
+scale = Vector2( 360.358, 49.0282 )
+shape = SubResource( 9 )
+
+[node name="bomb" type="Sprite" parent="Bomba/Area2D"]
+position = Vector2( 11, 10 )
+scale = Vector2( 1.83072, 1.80532 )
+texture = ExtResource( 9 )
+
+[connection signal="body_entered" from="Bomba/Area2D" to="player1" method="_on_Area2D_body_entered"]
