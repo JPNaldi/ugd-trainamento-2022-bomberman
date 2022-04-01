@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var velocity : Vector2 = Vector2()
 var direction : Vector2 = Vector2()
-var health = 3
+var life = 4
 
 func read_input():
 	velocity = Vector2()
@@ -25,23 +25,12 @@ func read_input():
 	
 	velocity = velocity.normalized()
 	velocity = move_and_slide(velocity * 200)
+	
+func _process(delta):
+		read_input()
 
-func _physics_process(delta):
-	read_input()
-
-func TakeDamage():
-	if (life = 3):
-		var Life_p1 = get_parent().get_parent().get_node ("Life_p1")
-		Label -= 1
-
-	if (life = 2):
-		var life = get_parent().get_parent().get_node ("Life_p1")
-		life -= 1
-
-	if (life = 1):
-		queue_free()
-		get_tree().reload_current_scene()
-
-func _on_Area2D_body_entered(body):
-	life -= 1
-	print ("damage")
+func _on_Area2D_body_entered(_body):
+	if (life == 3):
+		var textLabel = get_parent().get_parent().get_node ("Life_p1")
+		textLabel -= 1
+		print ("damage")

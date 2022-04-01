@@ -11,6 +11,3 @@ func _ready():
 func do_damage(amount):
 	life -= 1
 	new_label.text = str(life)
-
-func TakeDamage():
-	
